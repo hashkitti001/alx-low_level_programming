@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * read_textfile - check the code for Holberton School students.
+ * read_textfile - function.
  * @filename: Character
  * @letters: Size_t
  * Return: 0 or countLetter
