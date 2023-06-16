@@ -13,10 +13,10 @@ int main(void)
 {
 	int i = 0, j;
 
-	for(i = 0; i <= 9; i++)
+	for (i = 0; i <= 9; i++)
 	{
 		j = 0;
-		for(j = 0; j <= 9; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			if (i != j && i <= j)
 			{
@@ -28,10 +28,8 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-			}
-			
+			}	
 		}
-		
 	}
 	putchar('\n');
 
