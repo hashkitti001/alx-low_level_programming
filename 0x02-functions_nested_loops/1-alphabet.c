@@ -14,5 +14,4 @@ while (ch <= 'z')
 	ch++;
 }
 	_putchar('\n');
-	return (0);
 }
