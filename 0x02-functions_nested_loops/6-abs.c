@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * abs - Prints the sign of a number.
+ * _abs - Prints the sign of a number.
  * @n: The number of which the sign will be printed.
  *
  * Return: The absolute value of a number
