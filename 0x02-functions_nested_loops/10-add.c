@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * add -Adds two numbers
+ * add - Adds two numbers
  *
  * @a : First number
  *
