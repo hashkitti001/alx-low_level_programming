@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_line - short description, single line
- * @void: description of parameter a
+ * @n: Argument
 (* a blank line
  * description: longer description of the function)?
 (* section header: section description)*
