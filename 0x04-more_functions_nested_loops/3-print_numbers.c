@@ -2,7 +2,7 @@
 /**
  * print_numbers - writes the character c to stdout
  *
- * Return: void
+ * @void: void
  * On error, -1 is returned, and errno is set appropriately.
  */
 void print_numbers(void)
