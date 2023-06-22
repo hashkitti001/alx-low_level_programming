@@ -1,17 +1,20 @@
 #include <stdio.h>
-int main (void)
-{
-long int i, num;
+#include "main.h"
+/**
+ * main - prints the largest prime factor of 612852475143
+ * Bwave ICT / Bright Daniel
+ * Return: always 0
+ **/
 
-num = 612852475143;
-	for (i = 2; i <= num; i++)
+int main(void)
+{
+	unsigned long int i, n = 612852475143;
+
+	for (i = 3; i < 782849; i = i + 2)
 	{
-		if (num % i == 0)
-		{
-			num = num / i;
-			i--;
-		}
+		while ((n % i == 0) && (n != i))
+			n = n / i;
 	}
-	printf("%li\n", i);
-return (0);
+	printf("%lu\n", n);
+	return (0);
 }
