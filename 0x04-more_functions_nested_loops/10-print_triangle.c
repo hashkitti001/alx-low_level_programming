@@ -1,36 +1,22 @@
 #include "main.h"
-
 /**
- * print_triangle - short description, single line
- * @size: description of parameter a
-(* a blank line
- * description: longer description of the function)?
-(* section header: section description)*
- * return: void
-*/
-
-void print_triangle(int size)
+ * print_number - prints an integer
+ * @n:.input integer parameter
+ *
+ */
+void print_number(int n)
 {
-	int i, j;
+	unsigned int i = n;
 
-	if (size <= 0)
+	if (n < 0)
 	{
-		_putchar('\n');
+		_putchar(45);
+		i = -i;
 	}
-	else
+	if (i / 10)
 	{
-		for (i = 1; i <= size; i++)
-		{
-			for (j = 1; j <= size; j++)
-			{
-				if (j <= (size - i))
-				{
-					_putchar(' ');
-				}
-				else
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
+		print_number(i / 10);
 	}
+	_putchar(i % 10 + '0');
 }
+
