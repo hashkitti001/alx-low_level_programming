@@ -1,34 +1,29 @@
 #include "main.h"
 
-int is_prime(int num, int div);
-
 /**
- * is_prime_number - functions recursives
- * @n: Integer
- * Return: 0 or is_prime(n, 2)
+ * check - checks to see if number is prime
+ * @a:int
+ * @b:int
+ * Return:int
  */
-
-int is_prime_number(int n)
+int check(int a, int b)
 {
-	if (n < 2)
+	if (b < 2 || b % a == 0)
 		return (0);
-
-	return (is_prime(n, 2));
-
-}
-
-/**
- * is_prime - functions recursives
- * @num: Integer
- * @div: Integer
- * Return: 1, is_prime(num, div + 1)
- */
-
-int is_prime(int num, int div)
-{
-	if ((num / 2) < div)
+	else if (a > b / 2)
 		return (1);
 	else
-		return ((num % div == 0 || num < 2) ? 0 : (is_prime(num, div + 1)));
+		return (check(a + 1, b));
 }
 
+/**
+ * is_prime_number - states if number is prime
+ * @n:int
+ * Return:int
+ */
+int is_prime_number(int n)
+{
+	if (n == 2)
+		return (1);
+	return (check(2, n));
+}
