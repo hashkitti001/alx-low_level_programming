@@ -16,5 +16,5 @@ else
 {
 powered = x * _pow_recursion(x, y - 1);
 }
-return (result);
+return (powered);
 }
