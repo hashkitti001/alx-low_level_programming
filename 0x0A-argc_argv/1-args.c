@@ -1,11 +1,12 @@
 #include <stdio.h>
 /**
  * main - Prints the argument count of a program
- * @argc: Argument count 
+ * @argc: Argument count
  * @argv: Arguments
- * Return 0
-*/
-int main(int argc, char ** argv)
+ *
+ * Return: 0
+ */
+int main(int argc, char **argv)
 {
 (void)argv;
 printf("%d", argc);
