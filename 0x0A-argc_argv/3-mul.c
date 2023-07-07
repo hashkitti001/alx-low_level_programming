@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Prints the multiplication of two integers
  * @argc: argument count
@@ -7,14 +8,17 @@
 */
 int main(int argc, char **argv)
 {
-if(argc - 1 < 2)
+int j,k;
+if(argc  < 3)
 {
 printf("Error");
 return (1);
 }
 else
 {
-printf("%d\n", argv[1] * argv[2])
+j = atoi(argv[1]);
+k = atoi(argv[2]);
+printf("%d\n", j * k);
 return (0);
 }
 }
