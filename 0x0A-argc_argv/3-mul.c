@@ -9,16 +9,16 @@
 int main(int argc, char **argv)
 {
 int j, k;
-if (argc  < 3)
+if (argc < 3)
 {
-printf("Error");
+printf("Error\n");
 return (1);
 }
 else
 {
 j = atoi(argv[1]);
 k = atoi(argv[2]);
-printf("%d\n", j *k);
+printf("%d\n", j * k);
 return (0);
 }
 }
