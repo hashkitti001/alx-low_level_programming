@@ -1,9 +1,16 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+/**
+ * main - adds positive numbers.
+ * @argc: argument count
+ * @argv: arguments
+ *
+ * Return: 0
+*/
 int main(int argc, char **argv)
 {
-int j, k, sum = 0;
-	char *total;
+int i, n, sum = 0;
+	char *flag;
 
 	if (argc < 2)
 	{
@@ -11,9 +18,9 @@ int j, k, sum = 0;
 		return (0);
 	}
 
-	for (j = 1; argv[j]; j++)
+	for (i = 1; argv[i]; i++)
 	{
-		k = strtol(argv[j], &flag, 10);
+		n = strtol(argv[i], &flag, 10);
 		if (*flag)
 		{
 			printf("Error\n");
@@ -21,8 +28,9 @@ int j, k, sum = 0;
 		}
 		else
 		{
-			total += k;
+			sum += n;
 		}
 	}
-	printf("%d\n", total);
+	printf("%d\n", sum);
+	return (0);
 }
