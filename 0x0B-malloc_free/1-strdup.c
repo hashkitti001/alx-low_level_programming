@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include "main.h"
-/* _strdup - Returns a pointer to a  new string which is a clone
- * @str: a string 
+/**
+ * _strdup - Returns a pointer to a new string which is a clone
+ * @str: a string
  * Return: NULL or ar
 */
 char *_strdup(char *str)
