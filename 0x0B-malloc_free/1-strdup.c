@@ -9,8 +9,18 @@ char *_strdup(char *str)
 {
 	char *pointer;
 
+	int j, len = 0;
+
 	if (str == NULL)
 		return (NULL);
-	pointer = malloc(sizeof(str));
+	while (str[len] != '\0')
+		len++;
+	pointer = (char *)malloc(sizeof(char) * len + 1);
+	if (pointer == NULL)
+		return (NULL);
+	for (j = 0; j < len; j++)
+		pointer[i] = str[i];
+	copy[len] = '\0';
+
 	return (pointer);
 }
