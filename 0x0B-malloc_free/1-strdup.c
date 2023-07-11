@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	if (pointer == NULL)
 		return (NULL);
 	for (j = 0; j < len; j++)
-		pointer[i] = str[i];
+		pointer[j] = str[j];
 	copy[len] = '\0';
 
 	return (pointer);
