@@ -1,23 +1,40 @@
 #include "main.h"
 #include <stdlib.h>
-int _strlen(char *s);
 
 /**
- * alloc_grid- writes the character c to stdout
- * @width: Integer
- * @height: Integer
- * Return: arr
+ * alloc_grid - returns a pointer to a 2 dimensional array of integers.
+ * @width: width of array
+ * @height: height of array
+ *
+ * Return: a pointer to a 2 dimensional array of integers.
  */
-
 int **alloc_grid(int width, int height)
 {
-	int **arr;
-	int i;
+	int **array, i, j;
+	int len = width * height;
 
-	arr = malloc(height * sizeof(int *));
+	if (len <= 0)
+		return (NULL);
+
+	array = (int **)malloc(sizeof(int *) * height);
+	if (array == NULL)
+		return (NULL);
 
 	for (i = 0; i < height; i++)
-		arr[i] = malloc(width * sizeof(int));
+	{
+		array[i] = (int *)malloc(sizeof(int) * width);
+		if (array[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+				free(array[i]);
+			free(array);
+			return (NULL);
+		}
+	}
 
-	return (arr);
+	for (i = 0; i < height; i++)
+		for (j = 0; j < width; j++)
+			array[i][j] = 0;
+
+	return (array);
 }
