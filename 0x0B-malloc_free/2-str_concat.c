@@ -1,53 +1,47 @@
 #include "main.h"
 #include <stdlib.h>
-int _strlen(char *s);
+#include <stdio.h>
 
 /**
- * str_concat - writes the character c to stdout
- * @s1: Character
- * @s2: Character
- * Return: NULL or str
+ * str_concat - concatenates two strings.
+ * @s1: first string
+ * @s2: second string
+ *
+ * Return: a pointer to a newly allocated space in memory which
+ * contains the contents of s1, followed by the contents of s2,
+ * and null terminated. NULL on failure
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0;
-	int j = 0;
+	int i, j, len1, len2, len;
+	char *result;
 
-	char *str;
+	len1 = len2 = 0;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-		str = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+	if (s1 != NULL)
+	{
+		i = 0;
+		while (s1[i++] != '\0')
+			len1++;
+	}
 
-	if (str == NULL)
+	if (s2 != NULL)
+	{
+		i = 0;
+		while (s2[i++] != '\0')
+			len2++;
+	}
+
+	len = len1 + len2;
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
 		return (NULL);
 
-	for (; i < _strlen(s1); i++)
-		str[i] = s1[i];
+	for (i = 0; i < len1; i++)
+		result[i] = s1[i];
+	for (j = 0; j < len2; j++, i++)
+		result[i] = s2[j];
+	result[len] = '\0';
 
-	for (; j < _strlen(s2); i = i + 1, j++)
-		str[i] = s2[j];
-
-	str[i] = '\0';
-
-	return (str);
+	return (result);
 }
-
-/**
- * _strlen - short description, single line
- * @s: description of parameter s
- * Return: length of s
-*/
-int _strlen(char *s)
-{
-	int count = 0;
-
-	while (s[count] != '\0')
-		count++;
-
-	return (count);
-}
-
