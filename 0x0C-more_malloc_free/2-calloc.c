@@ -1,31 +1,25 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * calloc - Allocates memory for an array
- * @nmemb: nearest member in unsigned int type
- * @size: size of array
- * Return: NULL or pointer to array
+ * _calloc - allocates memory for an array of @nmemb elements of
+ * @size bytes each and returns a pointer to the allocated memory.
  *
-*/
+ * @nmemb: allocate memory for array
+ * @size: allocate element of size bytes
+ *
+ * Return: pointer to the allocated memory.
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-char *pointer;
+	char *a;
+	unsigned int b;
 
-unsigned int c;
-
-if (nmemb == 0 || size == 0)
-{
-return (NULL);
-}
-else
-{
-int dim = nmemb * size;
-
-pointer = malloc(dim);
-for (c = 0; c < dim; c++)
-{
-pointer[c] = 0;
-}
-return (pointer);
-}
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	a = malloc(nmemb * size);
+	if (a == NULL)
+		return (NULL);
+	for (b = 0; b < (nmemb * size); b++)
+		a[b] = 0;
+	return (a);
 }
