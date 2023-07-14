@@ -17,6 +17,6 @@ exit(ERRNO);
 }
 else
 {
-return (p);
+return (q);
 }
 }
