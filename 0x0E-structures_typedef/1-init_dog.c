@@ -1,7 +1,7 @@
 #include "dog.h"
 /**
  * init_dog - Initializes a structure with values
- * @d: Structure 
+ * @d: Structure
  * @name: Name property
  * @age: Age property
  * @owner: Owner property
@@ -9,7 +9,7 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-if(d)
+if (d)
 {
 d->name = name;
 d->age = age;
