@@ -1,4 +1,3 @@
-#include <stdio.h>
 #ifndef DOG
 #define DOG
 /**
@@ -6,7 +5,7 @@
  * @name: Name of the dog
  * @age: Age of the dog
  * @owner: Owner of the dog
-*/ 
+*/
 typedef struct dog
 {
 char *name;
