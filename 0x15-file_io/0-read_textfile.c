@@ -1,9 +1,9 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * read_textfile - reads a text file and prints
- *  it to the POSIX standard output
- *  @filename: the name of the file to be printed 
- *  @letters: the number of letters of text to be printed
+ *it to the POSIX standard output
+ * @filename: the name of the file to be printed
+ * @letters: the number of letters of text to be printed
  *  Return: 0 if NULL
 */
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -12,7 +12,7 @@ ssize_t o, r, w;
 
 char *holder;
 
-if(filename == NULL)
+if (filename == NULL)
 	{
 	return (0);
 	}
@@ -23,14 +23,14 @@ if (holder == NULL)
 	}
 o = open(filename, O_RDONLY);
 r = read(o, holder, letters);
-w = write(STDOUT_FILENO, buffer, r);
+w = write(STDOUT_FILENO, holder, r);
 
-if(o == -1 || r == - 1 || w == -1 || w != r)
+if (o == -1 || r == -1 || w == -1 || w != r)
 	{
-	free(buffer);
+	free(holder);
 	return (0);
 	}
-	free(buffer);
+	free(holder);
 	close(o);
 return (w);
 }
